@@ -1,1 +1,1 @@
-// Data base config setup
+// Data base config setup in cofig folder
