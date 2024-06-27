@@ -1,11 +1,11 @@
 # Welcome to Flight Services
 
 ## Project Setup
--clone the project on your local system
--Execute `npm install` on the same path as root directory
--Create a `.env` file in the root dir and add following environments variable 
-  -`PORT 3000`
--Inside the `src/config` folder, create a new file `config.json` and then add the following piece of code
+- clone the project on your local system
+- Execute `npm install` on the same path as root directory
+- Create a `.env` file in the root dir and add following environments variable 
+  `PORT 3000`
+- Inside the `src/config` folder, create a new file `config.json` and then add the following piece of code
 
 ```
 {
@@ -21,3 +21,32 @@
 ```
 -Once you've added your db config as listed above, go to the src folder via terminal and execute 
 `npx sequelize db:create`
+
+## Database Design
+- Airplane table :
+  - id
+  - model number
+  - capacity
+- A flight belongs to an airplane but one airplane can be used in multiple flights.
+
+- Flights table:
+  - id
+  - departure_city_id
+  - destination_city_id
+  - departure
+  - arrival
+  - airport_id
+  - flight_number
+
+- Airport table:
+  - id
+  - name
+  - city_id
+  - address
+- One airplane can have many flights, but a flight belongs to one airplane.  
+
+- City:
+  - id
+  - name
+- A city has many airports but one airport belongs to single city.  
+
