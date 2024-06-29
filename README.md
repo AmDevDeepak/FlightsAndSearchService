@@ -55,4 +55,10 @@ and then execute `npx sequelize db:migrate`
 ## Tables
 ### City Table -> id, name, created_at, updated_id
 ### Airport -> id, name, address, city_id, created_at, update_at
-   Relationship : City has many airports and Airport belongs to a city (one to many relationship)
+    Relationship : City has many airports and Airport belongs to cit(one to many relationship)
+
+```
+npx sequelize model:generate --name Airport --attributes name:String,address:String,cityId:integer
+
+```
+ 
