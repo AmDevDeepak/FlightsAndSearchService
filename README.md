@@ -61,4 +61,13 @@ and then execute `npx sequelize db:migrate`
 npx sequelize model:generate --name Airport --attributes name:String,address:String,cityId:integer
 
 ```
- 
+To seed random data in database first we need to create seed file using: 
+
+```
+npx sequelize seed:generate --name add-airplanes
+``` 
+
+Then we will execute : 
+```
+npx sequelize db:seed:all
+```
