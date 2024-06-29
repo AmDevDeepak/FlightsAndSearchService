@@ -51,3 +51,8 @@ and then execute `npx sequelize db:migrate`
   - name
 - A city has many airports but one airport belongs to single city.  
 
+
+## Tables
+### City Table -> id, name, created_at, updated_id
+### Airport -> id, name, address, city_id, created_at, update_at
+   Relationship : City has many airports and Airport belongs to a city (one to many relationship)
